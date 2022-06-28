@@ -1,6 +1,7 @@
 # Ceneo Web Scraper
 
 - - -
+
 #### Struktura opinii w serwisie [Ceneo.pl](https://www.ceneo.pl/)
 |Składowa opinii|Selektor|Nazwa zmiennej|Typ danych|
 |---------------|--------|--------------|----------|
@@ -18,6 +19,7 @@
 |data zakupu produktu|span.user-post__published > time:nth-child(2)\["datetime"\]|purchased|string|
 
 - - -
+
 #### Zastosowane biblioteki
 + **Flask**	-	framework aplikacji webowych,j est sklasyfikowany jako micro-framework, ponieważ nie wymaga określonych narzędzi ani bibliotek
 + **JSON**	-	biblioteka służąca do pracy z danymi JSON;  wchodzi w skład standardowych modułów narzędziowych Pythona
@@ -70,3 +72,5 @@
     + dodanie tabeli z opiniami
     + strona dla wykresów
     + buttony na stronie
+
+- - -
