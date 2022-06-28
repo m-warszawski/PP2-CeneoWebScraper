@@ -1,5 +1,5 @@
 # Ceneo Web Scraper
-<hr/>
+- - -
 #### Struktura opinii w serwisie [Ceneo.pl](https://www.ceneo.pl/)
 |Składowa opinii|Selektor|Nazwa zmiennej|Typ danych|
 |---------------|--------|--------------|----------|
@@ -15,7 +15,7 @@
 |dla ilu osób nieprzydatna|button.vote-no > span|useless||
 |data wystawienia opinii|span.user-post__published > time:nth-child(1)\["datetime"\]|published||
 |data zakupu produktu|span.user-post__published > time:nth-child(2)\["datetime"\]|purchased||
-<hr/>
+- - -
 #### Zastosowane biblioteki
 + **Flask**	-	framework aplikacji webowych,j est sklasyfikowany jako micro-framework, ponieważ nie wymaga określonych narzędzi ani bibliotek
 + **JSON**	-	biblioteka służąca do pracy z danymi JSON;  wchodzi w skład standardowych modułów narzędziowych Pythona
@@ -26,7 +26,7 @@
 + **BeautifulSoup**	-	biblioteka do analizowania dokumentów HTML i XML. Tworzy drzewo parsowania dla przeanalizowanych stron, które można wykorzystać do wyodrębnienia danych z HTML, co jest przydatne do + skrobania stron internetowych
 + **Matplotlib**	-	biblioteka do tworzenia wykresów dla języka programowania Python i jego rozszerzenia numerycznego NumPy
 + **Markdown**  -    biblioteka służąca do konwersji treści pomiędzy Markdown a HTML
-<hr/>
+- - -
 #### Etapy pracy
 ##### -> Projekt strukturalny
 1. Pobranie elementów pojedynczej opinii do niezależnych zmiennych
@@ -50,4 +50,4 @@
         2. histogram częstości występowania poszczególnych ocen (liczby gwiazdek)
 ##### -> Projekt obiektowy
 
-<hr/>
+- - -
