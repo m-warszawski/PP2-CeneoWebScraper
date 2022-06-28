@@ -1,7 +1,6 @@
 # Ceneo Web Scraper
 
 ## Struktura opinii w serwisie [Ceneo.pl](https://www.ceneo.pl/)
-
 |Składowa opinii|Selektor|Nazwa zmiennej|Typ danych|
 |---------------|--------|--------------|----------|
 |opinia|div.js_product-review|opinion|bs4.element.Tag|
@@ -16,6 +15,18 @@
 |dla ilu osób nieprzydatna|button.vote-no > span|useless||
 |data wystawienia opinii|span.user-post__published > time:nth-child(1)\["datetime"\]|published||
 |data zakupu produktu|span.user-post__published > time:nth-child(2)\["datetime"\]|purchased||
+
+## Zastosowanai biblioteki
+| Biblioteka | Krótki opis |
+|---|---|
+| Flask |  |
+| JSON | biblioteka służąca do pracy z danymi JSON;  wchodzi w skład standardowych modułów narzędziowych Pythona |
+| OS | biblioteka udostępniająca funkcje do interakcji z systemem operacyjnym; OS wchodzi w skład standardowych modułów narzędziowych Pythona |
+| Requests | biblioteka do komunikacji HTTP, do celów web scrapingu oraz komunikacji z API opartym o HTTP |
+| Pandas | biblioteka do manipulacji i analizy danych; w szczególności oferuje struktury danych i operacje służące do manipulowania tabelami liczbowymi i szeregami czasowymi\.  |
+| NumPy | biblioteka dodająca obsługę dużych, wielowymiarowych tabel i macierzy |
+| BeautifulSoup | biblioteka do analizowania dokumentów HTML i XML\. Tworzy drzewo parsowania dla przeanalizowanych stron, które można wykorzystać do wyodrębnienia danych z HTML, co jest przydatne do skrobania stron internetowych |
+| Matplotlib | biblioteka do tworzenia wykresów dla języka programowania Python i jego rozszerzenia numerycznego NumPy |
 
 ## Etapy pracy nad projektem strukturalnym
 1. Pobranie elementów pojedynczej opinii do niezależnych zmiennych
