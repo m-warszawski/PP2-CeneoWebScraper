@@ -1,4 +1,4 @@
-# CeneoScraperS12
+# Ceneo Web Scraper
 
 ## Struktura opinii w serwisie [Ceneo.pl](https://www.ceneo.pl/)
 
