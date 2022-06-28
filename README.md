@@ -17,18 +17,17 @@
 |data zakupu produktu|span.user-post__published > time:nth-child(2)\["datetime"\]|purchased||
 
 ## Zastosowanai biblioteki
-| Biblioteka | Krótki opis |
-|---|---|
-| Flask |  |
-| JSON | biblioteka służąca do pracy z danymi JSON;  wchodzi w skład standardowych modułów narzędziowych Pythona |
-| OS | biblioteka udostępniająca funkcje do interakcji z systemem operacyjnym; OS wchodzi w skład standardowych modułów narzędziowych Pythona |
-| Requests | biblioteka do komunikacji HTTP, do celów web scrapingu oraz komunikacji z API opartym o HTTP |
-| Pandas | biblioteka do manipulacji i analizy danych; w szczególności oferuje struktury danych i operacje służące do manipulowania tabelami liczbowymi i szeregami czasowymi\.  |
-| NumPy | biblioteka dodająca obsługę dużych, wielowymiarowych tabel i macierzy |
-| BeautifulSoup | biblioteka do analizowania dokumentów HTML i XML\. Tworzy drzewo parsowania dla przeanalizowanych stron, które można wykorzystać do wyodrębnienia danych z HTML, co jest przydatne do skrobania stron internetowych |
-| Matplotlib | biblioteka do tworzenia wykresów dla języka programowania Python i jego rozszerzenia numerycznego NumPy |
++ Flask	-	framework aplikacji webowych,j est sklasyfikowany jako micro-framework, ponieważ nie wymaga określonych narzędzi ani bibliotek
++ JSON	-	biblioteka służąca do pracy z danymi JSON;  wchodzi w skład standardowych modułów narzędziowych Pythona
++ OS	-	biblioteka udostępniająca funkcje do interakcji z systemem operacyjnym; OS wchodzi w skład standardowych modułów narzędziowych Pythona
++ Requests	-	biblioteka do komunikacji HTTP, do celów web scrapingu oraz komunikacji z API opartym o HTTP
++ Pandas	-	biblioteka do manipulacji i analizy danych; w szczególności oferuje struktury danych i operacje służące do manipulowania tabelami liczbowymi i szeregami czasowymi. 
++ NumPy	biblioteka dodająca obsługę dużych, wielowymiarowych tabel i macierzy
++ BeautifulSoup	-	biblioteka do analizowania dokumentów HTML i XML. Tworzy drzewo parsowania dla przeanalizowanych stron, które można wykorzystać do wyodrębnienia danych z HTML, co jest przydatne do + skrobania stron internetowych
++ Matplotlib	-	biblioteka do tworzenia wykresów dla języka programowania Python i jego rozszerzenia numerycznego NumPy
 
-## Etapy pracy nad projektem strukturalnym
+## Etapy pracy
+#### Projekt strukturalny
 1. Pobranie elementów pojedynczej opinii do niezależnych zmiennych
 2. Zapisanie wszystkich elemntów pojedynczej opinii do jednej zmiennej \(słownik\)
 3. Pobranie wszystkich opinii z pojedynczej strony do słowników i dodnie ich do listy
@@ -48,3 +47,4 @@
     3. przygotowanie wykresów na podstawie zawartości opinii
         1. udział poszczególnych rekomendacji w ogólnej liczbie opinii
         2. histogram częstości występowania poszczególnych ocen (liczby gwiazdek)
+#### Projekt obiektowy
