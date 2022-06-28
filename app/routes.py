@@ -14,7 +14,6 @@ def index():
         with open(path,'r', encoding="utf-8") as f:
             text = f.read()
             description = markdown.markdown(text, extensions=['tables'])
-    print(description)
     return render_template("index.html.jinja", description=description)
 
 @app.route('/extract', methods=["POST", "GET"])

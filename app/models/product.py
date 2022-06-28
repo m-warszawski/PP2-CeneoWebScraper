@@ -23,7 +23,6 @@ class Product():
         response = requests.get(url)
         page = BeautifulSoup(response.text, "html.parser")
         self.product_name = get_item(page,"h1.product-top__product-info__name")
-        print(self.product_name)
         return self
 
     def extract_opinions(self):
