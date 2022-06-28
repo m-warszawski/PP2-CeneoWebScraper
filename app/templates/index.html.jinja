@@ -1,59 +1,17 @@
 {% extends "base.html.jinja" %}
 {% block content %}
-    <h1>Witaj w Ceneo Web Scraper!</h1>
-    <hr>
      <section>
         <div class="row">
             <div class="col">
-                <h4>Cel aplikacji</h4>
-                <p>Strona ta słuzy do pobierania opini na temat produktów z serwisu Ceneo.pl, zapisywanie ich, przetwarzanie i wyświetlanie statystyk.</p>
+                {{description}}
             </div>
         </div>
-    </section>
-
-     <section>
-        <div class="row">
-            <div class="col">
-                <h4>Opis działania aplikacji</h4>
-                <ol>
-                    <li>Na stronie <i>Ekstrakcja opinii</i> należy wpisujemy kod produktu.</li>
-                    <li>Po klikcięciu <b>Pobierz opinie</b> program przenosi nas na kolejną stronę, gdzie zostają wyświetlone pobrane informacje i wykresy.</li>
-                    <li>Lista produktów, o których pobrano już opinie jest dostępna w <i>Lista produktów</i>.</li>
-                    <li>Produkty można pobierać do woli.</li>
-                </ol>
-            </div>
-        </div>
-    </section>
-
-     <section>
-        <div class="row">
-            <div class="col">
-                <h4>Zastosowane biblioteki</h4>
-                <ul>
-                    <li>Flask</li>
-                    <li>OS</li>
-                    <li>BeautifulSoup</li>
-                    <li>Json</li>
-                    <li>Pandas</li>
-                    <li>NumPy</li>
-                    <li>Matplotlib</li>
-                    <li>Requests</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="row">
-            <div class="col">
-                {# <h4>Zastosowane podejścia</h4> #}
-                {# <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul> #}
-            </div>
-        </div>
-    </section>
-    
+    </section>    
 {% endblock content %}
+
+{% block scripts%}
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script>
+        $("table").addClass("table table-responsive table-bordered");
+    </script>
+{%endblock scripts%}
