@@ -1,0 +1,22 @@
+{% extends "base.html.jinja" %}
+{% block content %}
+    <section>
+        <h1>Wykresy</h1>
+        <hr>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="/static/plots/{{product_id}}_recommendations.png" class="rounded mx-auto img-fluid" alt="Recommendation">
+            </div>
+            <div class="col-md-6">
+                <img src="/static/plots/{{product_id}}_stars.png" class="rounded mx-auto img-fluid" alt="Stars">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col d-flex justify-content-center">
+                <a href="{{ url_for('product', product_id=product_id) }}">
+                    <button type="button" class="btn btn-secondary">Wróć do strony produktu</button>
+                </a>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

@@ -1,0 +1,99 @@
+{% extends "base.html.jinja" %}
+{% block content %}
+    <h1>Produkt</h1>
+    <hr>
+    <div class="row">
+        <ul class="list-group ">
+        {% for key, value in stats.items() %}
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                {{key}}
+            <div>
+                <b>{{value}}</b>
+                </div>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+
+    <div class="row pt-5 pb-5">
+        <div class="col col d-flex justify-content-evenly">
+            <a href="https://www.ceneo.pl/{{product_id}}" target="_blank">
+                <button type="button" class="btn" style="background: #ff6400; color: #fff">
+                    Zobacz w Ceneo
+                </button>
+            </a>
+            <a href="{{ url_for('plots', product_id=product_id) }}">
+                <button type="button" class="btn btn-danger">
+                    Zobacz wykresy
+                </button>
+            </a>
+            <a href="{{ url_for('download', product_id=product_id) }}">
+                <button type="button" class="btn btn-success">
+                    Pobierz plik json
+                </button>
+            </a>
+        </div>
+    </div>
+     <div class="row">
+     <h3 class="pb-2">Opinie:</h3>
+        <table id="opinions_table" class="table table-light table-bordered table-striped" style="font-size: 80%; overflow-x: scroll;">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Autor</th>
+                    <th>Rekomendacja</th>
+                    <th>Ocena</th>
+                    <th>Tekst opini</th>
+                    <th>Pomocna</th>
+                    <th>Nie pomocna</th>
+                    <th>Data publikacji</th>
+                    <th>Data zakupu</th>
+                    <th>Zalety</th>
+                    <th>Wady</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for row in opinions %}
+               <tr>
+                {% for key, value in row.items() %}
+                    {% if (key=='pros' or key=='cons') %}
+                        <td><ul>
+                            {% for x in value %}
+                                <li>{{x}}</li>
+                            {% else %}
+                                ----
+                            {% endfor %}
+                        </ul></td>
+                    {% else %}
+                        <td>{{value}}</td>
+                    {% endif %}
+                {% endfor %}    
+                </tr>      
+            {% endfor %}
+            </tbody>
+        </table>
+     </div>
+{% endblock content %}
+
+{% block scripts %}
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('#opinions_table').DataTable( {
+            paging: false,
+            responsive: true,
+            language: {
+                "processing": "Przetwarzanie...",
+                "search": "Szukaj:",
+                "lengthMenu": "Pokaż _MENU_ pozycji",
+                "info": "Pozycje od _START_ do _END_ z _TOTAL_ łącznie",
+                "infoEmpty": "Pozycji 0 z 0 dostępnych",
+                "infoFiltered": "(filtrowanie spośród _MAX_ dostępnych pozycji)",
+                "loadingRecords": "Wczytywanie...",
+                "zeroRecords": "Nie znaleziono pasujących pozycji",
+            }
+        } );
+} );
+    </script>
+{% endblock scripts %}

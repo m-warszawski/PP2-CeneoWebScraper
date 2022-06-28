@@ -1,0 +1,30 @@
+{% extends "base.html.jinja" %}
+{% block content %}
+<article>
+    <h1> O autorze </h1>
+    <hr>
+    <div class="row">
+        <div class="col-sm-6">
+            <p> Nazywam się: <strong>Michał Warszawski</strong>.</p>
+            <p>Studiuję <strong>Informatykę stosowaną</strong> na <strong>Uniwersytecie
+                    Ekonomicznym</strong>.
+            </p>
+            <p>Od zawsze interesowały mnie komputery i nowoczesne technologie. Jestem absolwentem technikum
+                informatycznego. Wybór kierunku studiów był więc oczywisty &colon;&rpar; </p>
+            <p>Na studiach chiałbym rozwinąć swoją wiedzę, zdobyćnowe umiejętności i dzięki zdobyciu
+                wyższegowykształcenia staćsięatrakcujniejszym na rynku pracy.</p>
+            <p>Za dotychczasowy osiągnięcie uważam ukończenie z wyróżnieniem krakowskiego Zespołu Szkół
+                Łączności</p>
+            <p>Chciałbym kiedyś zostać dobrym programistą i pracować w dużej firmie mającej realny wpływ na
+                rozwój rynku IT.</p>
+        </div>
+        <div class="col-sm-6">
+            <img class="img-fluid" src="{{ url_for('static', filename='images/laptop.jpg') }}" alt="Zdjęcie" />
+            <div>
+                <img class="img-fluid logotype" src="{{ url_for('static', filename='images/zsl.png') }}" alt="Logo ZSŁ" />
+                <img class="img-fluid logotype" src="{{ url_for('static', filename='images/uek.png') }}" alt="Logo UEK" />
+            </div>
+        </div>
+    </div>
+</article>
+{% endblock content %}

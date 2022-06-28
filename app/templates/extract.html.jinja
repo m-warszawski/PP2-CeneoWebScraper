@@ -1,0 +1,38 @@
+{% extends "base.html.jinja" %}
+{% block content %}
+    <section>
+    <h1>Ekstrakcja opinii</h1>
+    <hr>
+        <div class="row">
+            <div class="col-12 text-center mt-3 mb-3">
+                <form action="{{url_for('extract')}}" method="POST">
+                    <div class="mb-3">
+                        <label for="product_id" class="form-label">Podaj kod produktu z Ceneo.pl:</label>
+                        <input type="text" class="form-control" id="product_id" name="product_id" placeholder="Kod produktu" maxlength="8"minlength="8" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="submit" class="btn btn-info mb-3" value="Pobierz opinie">
+                    </div>
+                </form>
+
+                <a href="https://www.ceneo.pl/" target="_blank">
+                    <button type="button" class="btn" style="background: #ff6400; color: #fff">
+                        Otwórz Ceneo
+                    </button>
+                </a>
+
+                <hr>
+                <p>https://www.ceneo.pl/<span id="url">134000860</span>#tab=reviews</p>
+                <hr>
+                <h5>Jak znaleźć kod produktu?</h5>
+                <p>            
+                    <b>https://www.ceneo.pl/</b> - adres strony Ceneo.pl<br>
+                    <b>134000860</b> - KOD PRODUKTU <br>
+                    <b>#tab=reviews</b> - wskazuje na zakładkę z opiniami
+                </p>
+                <hr>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock content %}
