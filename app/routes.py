@@ -6,6 +6,15 @@ import requests
 import markdown
 from app.models.product import Product
 
+def make_paths():
+    if not os.path.exists("app/static/plots"):
+        os.makedirs("app/static/plots")
+    if not os.path.exists("app/opinions"):
+        os.makedirs("app/opinions")
+    if not os.path.exists("app/products"):
+        os.makedirs("app/products")
+
+
 @app.route('/')
 def index():
     path = "./README.md"
@@ -18,6 +27,7 @@ def index():
 
 @app.route('/extract', methods=["POST", "GET"])
 def extract():
+    make_paths()
     if request.method == "POST":
         product_id = request.form.get("product_id")
         product = Product(product_id)
@@ -35,13 +45,14 @@ def extract():
 
 @app.route('/products')
 def products():
-    products = [filename.split(".")[0] for filename in os.listdir("app/opinions")]
     products_list = []
-    for product_id in products:
-        product = Product(product_id)
-        product.import_product()
-        stats = product.stats_to_file()
-        products_list.append(stats)
+    if os.path.exists("app/opinions"):
+        products = [filename.split(".")[0] for filename in os.listdir("app/opinions")]
+        for product_id in products:
+            product = Product(product_id)
+            product.import_product()
+            stats = product.stats_to_file()
+            products_list.append(stats)
     return render_template("products.html.jinja", products_list=products_list)
 
 @app.route('/author')

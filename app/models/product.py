@@ -55,8 +55,6 @@ class Product():
     
     def draw_charts(self):
         opinions = self.opinions_to_df()
-        if not os.path.exists("app/static/plots"):
-            os.makedirs("app/static/plots")
         recommendation = opinions["recommendation"].value_counts(dropna=False).sort_index().reindex(["Nie polecam", "Polecam", None], fill_value=0)
         recommendation.plot.pie(
             label="",
@@ -128,14 +126,10 @@ class Product():
         return [opinion.to_dict() for opinion in self.opinions]
 
     def export_opinions(self):
-        if not os.path.exists("app/opinions"):
-            os.makedirs("app/opinions")
         with open(f"app/opinions/{self.product_id}.json", "w", encoding="UTF-8") as jf:
             json.dump(self.opinions_to_dict(), jf, indent=4, ensure_ascii=False)
 
     def export_product(self):
-        if not os.path.exists("app/products"):
-            os.makedirs("app/products")
         with open(f"app/products/{self.product_id}.json", "w", encoding="UTF-8") as jf:
             json.dump(self.stats_to_file(), jf, indent=4, ensure_ascii=False)
     
