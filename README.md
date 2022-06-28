@@ -17,14 +17,14 @@
 |data zakupu produktu|span.user-post__published > time:nth-child(2)\["datetime"\]|purchased||
 
 ## Zastosowanai biblioteki
-+ Flask	-	framework aplikacji webowych,j est sklasyfikowany jako micro-framework, ponieważ nie wymaga określonych narzędzi ani bibliotek
-+ JSON	-	biblioteka służąca do pracy z danymi JSON;  wchodzi w skład standardowych modułów narzędziowych Pythona
-+ OS	-	biblioteka udostępniająca funkcje do interakcji z systemem operacyjnym; OS wchodzi w skład standardowych modułów narzędziowych Pythona
-+ Requests	-	biblioteka do komunikacji HTTP, do celów web scrapingu oraz komunikacji z API opartym o HTTP
-+ Pandas	-	biblioteka do manipulacji i analizy danych; w szczególności oferuje struktury danych i operacje służące do manipulowania tabelami liczbowymi i szeregami czasowymi. 
-+ NumPy	biblioteka dodająca obsługę dużych, wielowymiarowych tabel i macierzy
-+ BeautifulSoup	-	biblioteka do analizowania dokumentów HTML i XML. Tworzy drzewo parsowania dla przeanalizowanych stron, które można wykorzystać do wyodrębnienia danych z HTML, co jest przydatne do + skrobania stron internetowych
-+ Matplotlib	-	biblioteka do tworzenia wykresów dla języka programowania Python i jego rozszerzenia numerycznego NumPy
++ **Flask**	-	framework aplikacji webowych,j est sklasyfikowany jako micro-framework, ponieważ nie wymaga określonych narzędzi ani bibliotek
++ **JSON**	-	biblioteka służąca do pracy z danymi JSON;  wchodzi w skład standardowych modułów narzędziowych Pythona
++ **OS**	-	biblioteka udostępniająca funkcje do interakcji z systemem operacyjnym; OS wchodzi w skład standardowych modułów narzędziowych Pythona
++ **Requests**	-	biblioteka do komunikacji HTTP, do celów web scrapingu oraz komunikacji z API opartym o HTTP
++ **Pandas**	-	biblioteka do manipulacji i analizy danych; w szczególności oferuje struktury danych i operacje służące do manipulowania tabelami liczbowymi i szeregami czasowymi. 
++ **NumPy**     -   biblioteka dodająca obsługę dużych, wielowymiarowych tabel i macierzy
++ **BeautifulSoup**	-	biblioteka do analizowania dokumentów HTML i XML. Tworzy drzewo parsowania dla przeanalizowanych stron, które można wykorzystać do wyodrębnienia danych z HTML, co jest przydatne do + skrobania stron internetowych
++ **Matplotlib**	-	biblioteka do tworzenia wykresów dla języka programowania Python i jego rozszerzenia numerycznego NumPy
 
 ## Etapy pracy
 #### Projekt strukturalny
